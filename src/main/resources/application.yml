@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health,info,metrics
+  prometheus:
+    metrics:
+      export:
+        step: 5s
